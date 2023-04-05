@@ -1,4 +1,4 @@
-// Let and Const
+// LET AND CONST
 
 var myName = 'Calvin'
 console.log(myName)
