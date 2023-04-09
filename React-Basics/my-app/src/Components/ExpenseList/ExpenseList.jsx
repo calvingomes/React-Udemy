@@ -1,4 +1,5 @@
 import React from 'react'
+import './ExpenseList.css'
 import ExpenseItem from '../ExpenseItem/ExpenseItem'
 
 const ExpenseList = () => {
@@ -25,7 +26,7 @@ const ExpenseList = () => {
   ];
 
   return (
-    <div>
+    <div className="expenses">
       <ExpenseItem
         name={expenses[0].title}
         date={expenses[0].date}
