@@ -1,4 +1,4 @@
-import ExpenseList from "./Components/ExpenseList/ExpenseList";
+import ExpenseList from "./Components/Expenses/ExpenseList/ExpenseList";
 
 function App() {
   return (
