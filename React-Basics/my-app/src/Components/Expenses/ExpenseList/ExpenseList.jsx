@@ -18,7 +18,7 @@ const ExpenseList = ({ expenses }) => {
       />
       {expenses.map((exp) => {
         return (
-          <ExpenseItem name={exp.title} date={exp.date} price={exp.amount} />
+          <ExpenseItem key={exp.id} name={exp.title} date={exp.date} price={exp.amount} />
         );
       })}
     </div>
