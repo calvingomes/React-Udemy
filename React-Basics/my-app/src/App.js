@@ -1,13 +1,10 @@
-import NewExpenses from "./Components/Expenses/NewExpenses/NewExpenses";
-import ExpenseList from "./Components/Expenses/ExpenseList/ExpenseList";
+import React from "react";
+import ExpensesWrapper from "./Components/Expenses/ExpensesWrapper/ExpensesWrapper";
 
 const App = () => {
   return (
-    <div>
-      <NewExpenses />
-      <ExpenseList />
-    </div>
+    <ExpensesWrapper />
   );
-}
+};
 
 export default App;

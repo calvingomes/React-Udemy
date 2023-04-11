@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./NewExpenses.css";
 
-const NewExpenses = () => {
+const NewExpenses = ({ onSaveExpenseData }) => {
   const [title, setTitle] = useState("");
   const [amount, setAmount] = useState("");
   const [date, setDate] = useState("");
@@ -34,9 +34,10 @@ const NewExpenses = () => {
       amount: amount,
       date: new Date(date),
     };
-    setTitle('');
-    setAmount('');
-    setDate('');
+    onSaveExpenseData(expenseData);
+    setTitle("");
+    setAmount("");
+    setDate("");
   };
   return (
     <div className="new-expense">
