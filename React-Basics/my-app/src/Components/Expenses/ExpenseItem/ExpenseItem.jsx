@@ -3,8 +3,7 @@ import Card from "../../UI/Card/Card";
 import ExpenseDate from "../ExpenseDate/ExpenseDate";
 import "./ExpenseItem.css";
 
-const ExpenseItem = ({name, date, price}) => {
-
+const ExpenseItem = ({ name, date, price }) => {
   return (
     <Card className="expense-item">
       <ExpenseDate date={date} />
