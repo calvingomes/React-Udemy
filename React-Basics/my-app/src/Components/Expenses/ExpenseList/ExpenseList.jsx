@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./ExpenseList.css";
 import ExpensesFilter from "../ExpensesFiler/ExpensesFilter";
 import ExpenseItem from "../ExpenseItem/ExpenseItem";
+import ExpensesChart from "../ExpensesChart/ExpensesChart";
 
 const ExpenseList = ({ expenses }) => {
   const [filteredYear, setFilteredYear] = useState("2020");
@@ -20,8 +21,9 @@ const ExpenseList = ({ expenses }) => {
         selected={filteredYear}
         onChangeFilter={filterChangeHandler}
       />
+      <ExpensesChart expenses={filteredExpenses} />
       {filteredExpenses.length === 0 ? (
-        <p>No Expenses found!</p>
+        <p className="noExpensesMsg">No Expenses found!</p>
       ) : (
         filteredExpenses.map((exp) => {
           return (
