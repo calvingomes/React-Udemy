@@ -10,11 +10,9 @@ const ExpenseList = ({ expenses }) => {
     setFilteredYear(selectedYear);
   };
 
-  const filteredExpenses = expenses.filter(exp => {
-    return(
-      exp.date.getFullYear().toString() === filteredYear
-    )
-  })
+  const filteredExpenses = expenses.filter((exp) => {
+    return exp.date.getFullYear().toString() === filteredYear;
+  });
 
   return (
     <div className="expenses">
@@ -22,11 +20,20 @@ const ExpenseList = ({ expenses }) => {
         selected={filteredYear}
         onChangeFilter={filterChangeHandler}
       />
-      {filteredExpenses.map((exp) => {
-        return (
-          <ExpenseItem key={exp.id} name={exp.title} date={exp.date} price={exp.amount} />
-        );
-      })}
+      {filteredExpenses.length === 0 ? (
+        <p>No Expenses found!</p>
+      ) : (
+        filteredExpenses.map((exp) => {
+          return (
+            <ExpenseItem
+              key={exp.id}
+              name={exp.title}
+              date={exp.date}
+              price={exp.amount}
+            />
+          );
+        })
+      )}
     </div>
   );
 };
